@@ -1,75 +1,165 @@
-body {
-  font-family: "Poppins", sans-serif;
-  background: #0e0e0e;
-  color: #eee;
+/* ---------- Général ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;700&display=swap');
+
+* {
   margin: 0;
-  line-height: 1.6;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #0d0d0d 0%, #1b1126 100%);
+  color: #f0f0f0;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ---------- Header ---------- */
 header {
   text-align: center;
-  padding: 3rem 1rem;
-  background: #111;
+  padding: 7rem 1rem 4rem;
+  position: relative;
 }
 
-h1 {
-  font-size: 2.5rem;
+header h1 {
+  font-size: 3rem;
   color: #a87fff;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  animation: fadeDown 1.2s ease-out;
 }
 
+header p {
+  font-size: 1.2rem;
+  color: #ccc;
+  animation: fadeDown 1.6s ease-out;
+}
+
+.cv-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem;
+  background: rgba(168, 127, 255, 0.15);
+  border: 2px solid #a87fff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  transition: 0.3s;
+  animation: fadeUp 1.8s ease-out;
+}
+
+.cv-button:hover {
+  background: #a87fff;
+  color: #0d0d0d;
+  transform: translateY(-3px);
+}
+
+/* ---------- Navigation ---------- */
 nav {
-  margin-top: 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(15, 15, 15, 0.8);
+  backdrop-filter: blur(12px);
+  padding: 0.8rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 nav a {
-  margin: 0 1rem;
   color: #eee;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: 0.3s;
 }
 
 nav a:hover {
   color: #a87fff;
 }
 
-.cv-button {
-  display: inline-block;
-  margin-top: 1.5rem;
-  background: #a87fff;
-  color: white;
-  padding: 0.7rem 1.2rem;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.cv-button:hover {
-  background: #c9aaff;
-}
-
+/* ---------- Sections ---------- */
 section {
-  padding: 3rem 1.5rem;
+  padding: 5rem 1.5rem;
   max-width: 900px;
   margin: auto;
 }
 
 h2 {
-  color: #a87fff;
   text-align: center;
+  color: #a87fff;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+p {
   margin-bottom: 1rem;
+  color: #ddd;
 }
 
+/* ---------- Cartes ---------- */
 .skill-group, .project {
-  background: #1a1a1a;
-  border-radius: 10px;
-  padding: 1rem;
-  margin: 1rem 0;
-  border: 1px solid #333;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 1.2rem 0;
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s, border 0.3s;
 }
 
+.skill-group:hover, .project:hover {
+  transform: translateY(-4px);
+  border-color: #a87fff;
+}
+
+/* ---------- Footer ---------- */
 footer {
   text-align: center;
-  padding: 1rem;
-  background: #111;
+  padding: 2rem;
   color: #aaa;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+  nav {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
 }
