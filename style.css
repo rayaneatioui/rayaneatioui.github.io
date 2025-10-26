@@ -1,0 +1,75 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: #0e0e0e;
+  color: #eee;
+  margin: 0;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #111;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #a87fff;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: #eee;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #a87fff;
+}
+
+.cv-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: #a87fff;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cv-button:hover {
+  background: #c9aaff;
+}
+
+section {
+  padding: 3rem 1.5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  color: #a87fff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.skill-group, .project {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid #333;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  color: #aaa;
+}
